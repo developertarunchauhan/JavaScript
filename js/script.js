@@ -99,3 +99,88 @@ var threeLevel = [
 ];
 
 console.log(threeLevel);
+
+/**
+ * Appending data to an array: PUSH
+ */
+
+threeLevel.push([23, 45, 67]);
+
+console.log(threeLevel);
+
+/**
+ * Removing from array : POP
+ */
+
+
+var removedArray = threeLevel.pop();
+console.log(threeLevel);
+console.log('Removed Array : ' + removedArray);
+
+/**
+ * Removing the first element of the array : Shift()
+ */
+
+threeLevel.shift();
+
+console.log(threeLevel);
+
+/**
+ * Adding an element to starting of the array : unshift
+ */
+
+threeLevel.unshift([23, 12, "HELLO"]);
+
+console.log(threeLevel);
+
+/**
+ * ARRAYS : 
+ */
+
+var shoppingList = [
+    ["mango", 1],
+    ["Apple", 2],
+    ["Milk", 3],
+    ["Sugar", 4]
+];
+
+console.log(shoppingList);
+
+/**
+ * Write Reuseable Code with Functions
+ */
+
+function funOne() {
+    console.log("This is first function");
+}
+
+funOne();
+
+function funTwo(name) {
+    console.log("Hello " + name);
+}
+
+funTwo("Tarun");
+
+/**
+ * Scope : refers to the visibility of the variables
+ * Global scope : variable declared outside of a function and can be accessed accros the program or inside any function.
+ * Local scope : variables declared inside of a function and can only be accessed by the function itself.
+ */
+
+var abc_1 = "ABC"; // this is global variable
+
+function funThree() {
+    var abc_2 = "ABC_2"; // this is local variable
+}
+
+function funFour() {
+    if (typeof (abc_1 != "undefined")) {
+        console.log("GLOABL " + abc_1);
+    }
+    if (typeof (abc_2 != "undefined")) {
+        console.log("LOCAL" + abc_2);
+    }
+}
+
+funFour();
