@@ -1,0 +1,67 @@
+.box {
+  width: 100%;
+  display: flex;
+  flex-direction: row; }
+  .box .box_card {
+    background-size: auto cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    flex: 1;
+    transition: flex 0.5s ease-in;
+    position: relative;
+    cursor: pointer; }
+    .box .box_card.active {
+      flex: 6; }
+      .box .box_card.active h1 {
+        opacity: 1; }
+    .box .box_card h1 {
+      font-size: 2rem;
+      color: #ffffff;
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.5s ease-in; }
+
+.progress-box {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center; }
+  .progress-box-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .progress-box-container::before {
+      content: "";
+      background-color: #e0e0e0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 4px;
+      z-index: -20;
+      transition: all .5s ease-in; }
+  .progress-box-bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 4px;
+    z-index: -1;
+    background-color: red;
+    transition: all .5s ease-in; }
+  .progress-box-circle {
+    color: #999;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in;
+    transition-delay: .5s; }

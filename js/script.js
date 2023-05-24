@@ -178,9 +178,103 @@ function funFour() {
     if (typeof (abc_1 != "undefined")) {
         console.log("GLOABL " + abc_1);
     }
-    if (typeof (abc_2 != "undefined")) {
-        console.log("LOCAL" + abc_2);
-    }
+    // if (typeof (abc_2 != "undefined")) {
+    //     console.log("LOCAL" + abc_2);
+    // }
 }
 
 funFour();
+
+/**
+ * BOX
+ */
+
+// Getting NodeList of 'box_card'
+const box_card = document.querySelectorAll('.box_card');
+
+// Logging out the node list
+//console.log(box_card);
+
+
+// Looping through the node list
+box_card.forEach((card) => {
+    //console.log(card);
+    // Adding event listner to each indivisual node
+    card.addEventListener('click', () => {
+        // Calling function to remove 'active' class from all nodes 
+        removeActiveClass();
+        // adding 'active' class the clicked node
+        card.classList.add('active');
+    });
+});
+
+// function to remove 'active' class from all the nodes
+function removeActiveClass() {
+    box_card.forEach((card) => {
+        card.classList.remove('active');
+    });
+}
+
+/**
+ * PROGRESS BAR
+ */
+
+// getting all elements and save them to variables
+const progressBar = document.querySelector('.progress-box-bar');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const circles = document.querySelectorAll('.progress-box-circle');
+
+//console.log(active);
+//console.log(circles);
+
+// set currentActive to 1
+let currentActive = 1;
+
+
+// Adding event listner to 'prev'
+prev.addEventListener('click', () => {
+    // decrement currentActive if 'prev' button is 'clicked'
+    currentActive--;
+    next.disabled = false;
+    //console.log(currentActive);
+    if (currentActive < 1) {
+        currentActive = 1;
+        prev.disabled = true;
+        // console.log(currentActive);
+    }
+    updateProgressBar();
+});
+
+//adding event listner to 'next'
+next.addEventListener('click', () => {
+    currentActive++;
+    circles.forEach((circle) => {
+        //console.log(circle);
+        circle.classList.add('border-primary');
+    });
+    prev.disabled = false;
+    //console.log(currentActive);
+    if (currentActive > circles.length) {
+        currentActive = circles.length;
+        next.disabled = true;
+        //console.log(currentActive);
+    }
+    updateProgressBar();
+});
+
+function updateProgressBar() {
+    circles.forEach((circle, idx) => {
+        //console.log(idx);
+        if (idx < currentActive) {
+            circle.classList.add('border-primary');
+        } else {
+            circle.classList.remove('border-primary');
+        }
+    });
+    const active = document.querySelectorAll('.border-primary');
+
+    let progressPercentile = (active.length - 1) / (circles.length - 1) * 100;
+
+    progressBar.style.width = progressPercentile + '%';
+}

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass src/sass/app.scss src/style/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/developertarunchauhan/JavaScript/issues"
   },
-  "homepage": "https://github.com/developertarunchauhan/JavaScript#readme"
+  "homepage": "https://github.com/developertarunchauhan/JavaScript#readme",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
 }
