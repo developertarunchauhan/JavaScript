@@ -69,7 +69,7 @@
 .rotate-nav {
   position: relative;
   overflow-x: hidden;
-  height: 100vh; }
+  height: 80vh; }
   .rotate-nav_circle_container {
     position: absolute;
     top: -100px;
@@ -99,13 +99,25 @@
     left: 0;
     transform-origin: top left;
     transition: all 1s ease;
-    z-index: 50; }
+    z-index: 50;
+    padding: 100px 50px 10px 50px;
+    height: 100%; }
+    .rotate-nav_content-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
     .rotate-nav_content.rotate_content {
       transform: rotate(-20deg); }
   .rotate-nav_menu {
     position: absolute;
-    bottom: 0;
-    left: 0; }
+    bottom: 30px;
+    left: -300px;
+    transition: all 1.5s ease-in-out; }
+    .rotate-nav_menu.show_menu {
+      left: 0;
+      animation-name: animateMenu;
+      animation-duration: 2s; }
     .rotate-nav_menu nav ul {
       list-style: none; }
       .rotate-nav_menu nav ul li a:link,
@@ -114,3 +126,11 @@
         color: #ffffff;
         text-decoration: none;
         text-transform: uppercase; }
+
+@keyframes animateMenu {
+  0% {
+    left: -100px; }
+  90% {
+    left: 5px; }
+  100% {
+    left: 0; } }

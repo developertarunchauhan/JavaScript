@@ -291,11 +291,15 @@ const close = document.getElementById('close');
 const content = document.getElementById('content');
 const nav = document.getElementById('nav');
 
+const menu = document.getElementById('menu');
+
 open.addEventListener('click', () => {
     content.classList.add('rotate_content');
     nav.classList.add('rotate_circle');
+    menu.classList.add('show_menu');
 });
 close.addEventListener('click', () => {
     content.classList.remove('rotate_content');
     nav.classList.remove('rotate_circle');
+    menu.classList.remove('show_menu');
 });
