@@ -278,3 +278,24 @@ function updateProgressBar() {
 
     progressBar.style.width = progressPercentile + '%';
 }
+
+
+
+/**
+ * ROTATE NAVIGATION 
+ */
+
+const open = document.getElementById('open');
+const close = document.getElementById('close');
+
+const content = document.getElementById('content');
+const nav = document.getElementById('nav');
+
+open.addEventListener('click', () => {
+    content.classList.add('rotate_content');
+    nav.classList.add('rotate_circle');
+});
+close.addEventListener('click', () => {
+    content.classList.remove('rotate_content');
+    nav.classList.remove('rotate_circle');
+});
