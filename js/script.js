@@ -303,3 +303,38 @@ close.addEventListener('click', () => {
     nav.classList.remove('rotate_circle');
     menu.classList.remove('show_menu');
 });
+
+/**
+ * SEARCH BAR
+ */
+
+const searchInput = document.getElementById('search-input');
+
+const searchBtn = document.getElementById('search-btn');
+
+searchBtn.addEventListener('click', () => {
+    searchInput.classList.toggle('show_search-input');
+    searchBtn.classList.toggle('rounded-start-0');
+    input.focus();
+});
+
+/**
+ * BLUR LOADING
+ */
+
+const loadingText = document.getElementById('loading-text');
+const loadingImg = document.getElementById('loading-img');
+
+var load = 0;
+
+let int = setInterval(blurring, 30);
+
+function blurring() {
+    load++;
+
+    if (load > 99) {
+        clearInterval(int);
+    }
+    loadingText.innerText = load + '%';
+    console.log(load);
+}

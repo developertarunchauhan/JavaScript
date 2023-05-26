@@ -53,29 +53,33 @@
     </nav>
     <div class="container">
         <!-- Flex Card Start-->
-        <h1 class="text-center text-uppercase">Cards</h1>
-        <div class="box my-2 py-3 border-bottom border-dark" id="box">
-            <div class="box_card rounded-3 border shadow mx-1 active" style="background-image: url('image/img_1.jpg');">
-                <h1>Apple</h1>
-            </div>
-            <div class="box_card rounded-3 border shadow mx-1" style="background-image:url('image/img_2.jpg')">
-                <h1>Apple</h1>
-            </div>
-            <div class="box_card rounded-3 border shadow mx-1" style="background-image:url('image/img_3.jpg')">
-                <h1>Apple</h1>
-            </div>
-            <div class="box_card rounded-3 border shadow mx-1 d-none d-sm-block"
-                style="background-image:url('image/img_4.jpg')">
-                <h1>Apple</h1>
-            </div>
-            <div class="box_card rounded-3 border shadow mx-1 d-none d-sm-block"
-                style="background-image:url('image/img_5.jpg')">
-                <h1>Apple</h1>
+        <div class="bg-success my-2 py-2 px-4 border shadow">
+            <h1 class="text-center text-uppercase">Cards</h1>
+            <div class="box" id="box">
+                <div class="box_card rounded-3 border shadow mx-1 active"
+                    style="background-image: url('image/img_1.jpg');">
+                    <h1>Apple</h1>
+                </div>
+                <div class="box_card rounded-3 border shadow mx-1" style="background-image:url('image/img_2.jpg')">
+                    <h1>Apple</h1>
+                </div>
+                <div class="box_card rounded-3 border shadow mx-1" style="background-image:url('image/img_3.jpg')">
+                    <h1>Apple</h1>
+                </div>
+                <div class="box_card rounded-3 border shadow mx-1 d-none d-sm-block"
+                    style="background-image:url('image/img_4.jpg')">
+                    <h1>Apple</h1>
+                </div>
+                <div class="box_card rounded-3 border shadow mx-1 d-none d-sm-block"
+                    style="background-image:url('image/img_5.jpg')">
+                    <h1>Apple</h1>
+                </div>
             </div>
         </div>
+
         <!-- Flex Card End-->
         <!-- Progress Bar Begin-->
-        <div class="progress-box my-2 py-2 border-bottom border-dark shadow" id="progress-box">
+        <div class="progress-box my-2 py-2 px-4 border shadow" id="progress-box">
             <h1 class="text-center text-uppercase">Step Progress</h1>
             <div class="progress-box-container mb-4">
                 <div class="progress-box-bar bg-primary"></div>
@@ -137,6 +141,27 @@
             </div>
         </div>
         <!-- Rotate Nav Ends -->
+        <!-- Search Bar Begin-->
+        <div class="search-bar my-2 py-2 border bg-success" id="search-bar">
+            <div class="search-bar_box">
+                <input type="text" name="search-input" id="search-input" placeholder="search...."
+                    class="rounded-start search-bar_box_input border px-2 text-secondary shadow rounded">
+                <button class="btn btn-primary rounded-circle search-bar_box_button shadow" id="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Seaarch Bar Ends-->
+        <!-- Blurry Loading Start-->
+        <div class="blurry-loading my-2 py-2 border bg-info">
+            <div class="blurry-loading_box">
+                <img src="image/img_3.jpg" alt="" class="img-fluid border shadow rounded" id="loading-img">
+                <div class="loading-text text-light fw-light" id="loading-text">
+                    0%
+                </div>
+            </div>
+        </div>
+        <!-- Blurry Loading Start-->
     </div>
 
 

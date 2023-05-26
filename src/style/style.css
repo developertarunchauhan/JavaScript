@@ -69,7 +69,7 @@
 .rotate-nav {
   position: relative;
   overflow-x: hidden;
-  height: 80vh; }
+  min-height: 100vh; }
   .rotate-nav_circle_container {
     position: absolute;
     top: -100px;
@@ -134,3 +134,63 @@
     left: 5px; }
   100% {
     left: 0; } }
+
+.search-bar {
+  height: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center; }
+  .search-bar_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 50px; }
+    .search-bar_box_input {
+      position: absolute;
+      top: 0;
+      right: 30px;
+      width: 0;
+      height: 50px;
+      opacity: 0;
+      outline: none;
+      font-size: 25px;
+      transition: all .3s ease; }
+      .search-bar_box_input.show_search-input {
+        width: 250px;
+        opacity: 1;
+        height: 50px; }
+    .search-bar_box_button {
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 50px;
+      width: 50px;
+      transition: all .1s ease; }
+
+.blurry-loading {
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .blurry-loading_box {
+    position: relative;
+    height: 40rem;
+    width: 40rem; }
+    .blurry-loading_box img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      filter: blur(10px); }
+    .blurry-loading_box .loading-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 6rem; }
