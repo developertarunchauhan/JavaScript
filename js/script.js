@@ -319,7 +319,7 @@ searchBtn.addEventListener('click', () => {
 });
 
 /**
- * BLUR LOADING
+ * BLUR LOADING SCRIPT
  */
 
 const loadingText = document.getElementById('loading-text');
@@ -336,5 +336,4 @@ function blurring() {
         clearInterval(int);
     }
     loadingText.innerText = load + '%';
-    console.log(load);
 }
