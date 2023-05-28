@@ -51,10 +51,10 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container" id="main-content">
         <!-- Flex Card Start-->
-        <div class="bg-success my-2 py-2 px-4 border shadow">
-            <h1 class="text-center text-uppercase">Cards</h1>
+        <div class="bg-success my-2 py-2 px-4 border shadow rounded slide-in slide-show">
+            <h1 class="text-center text-uppercase text-white">Cards</h1>
             <div class="box" id="box">
                 <div class="box_card rounded-3 border shadow mx-1 active"
                     style="background-image: url('image/img_1.jpg');">
@@ -79,7 +79,7 @@
 
         <!-- Flex Card End-->
         <!-- Progress Bar Begin-->
-        <div class="progress-box my-2 py-2 px-4 border shadow" id="progress-box">
+        <div class="progress-box my-2 py-2 px-4 border shadow rounded slide-in" id="progress-box">
             <h1 class="text-center text-uppercase">Step Progress</h1>
             <div class="progress-box-container mb-4">
                 <div class="progress-box-bar bg-primary"></div>
@@ -95,7 +95,7 @@
         </div>
         <!-- Progress Bar Ends-->
         <!-- Rotate Menu Begin-->
-        <div class="rotate-nav my-2 py-2 border-bottom bg-success" id="rotate-nav">
+        <div class="rotate-nav my-2 py-2 border bg-success shadow slide-in" id="rotate-nav">
             <div class="rotate-nav_circle_container shadow-lg bg-info">
                 <div class="rotate-nav_circle" id="nav">
                     <button class="btn btn-danger rotate-nav_circle-btn-open" id="open">
@@ -142,7 +142,7 @@
         </div>
         <!-- Rotate Nav Ends -->
         <!-- Search Bar Begin-->
-        <div class="search-bar my-2 py-2 border bg-success" id="search-bar">
+        <div class="search-bar my-2 py-2 border bg-success rounded slide-in" id="search-bar">
             <div class="search-bar_box">
                 <input type="text" name="search-input" id="search-input" placeholder="search...."
                     class="rounded-start search-bar_box_input border px-2 text-secondary shadow rounded">
@@ -153,11 +153,11 @@
         </div>
         <!-- Seaarch Bar Ends-->
         <!-- Blurry Loading Start-->
-        <div class="blurry-loading my-2 py-2 border bg-info">
+        <div class="blurry-loading my-2 py-2 border bg-info shadow rounded slide-in" id="blurry-loading">
             <div class="blurry-loading_box">
                 <img src="image/img_3.jpg" alt="" class="img-fluid border shadow rounded" id="loading-img">
                 <div class="loading-text text-light fw-light" id="loading-text">
-                    0%
+                    <button class="btn btn-danger btn-lg text-uppercase" onclick="unBlur();">Load Content</button>
                 </div>
             </div>
         </div>

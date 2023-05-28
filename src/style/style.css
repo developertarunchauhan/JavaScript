@@ -1,3 +1,6 @@
+#main-content {
+  overflow-x: hidden; }
+
 .box {
   width: 100%;
   display: flex;
@@ -187,10 +190,19 @@
       position: absolute;
       top: 0;
       left: 0;
-      filter: blur(10px); }
+      filter: blur(100px); }
     .blurry-loading_box .loading-text {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 6rem; }
+
+.slide-in {
+  margin: 100px auto !important;
+  transform: translateX(200%);
+  transition: transform .5s ease-in-out; }
+  .slide-in:nth-of-type(even) {
+    transform: translateX(-200%); }
+  .slide-in.slide-show {
+    transform: translateX(0); }

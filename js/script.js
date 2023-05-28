@@ -327,13 +327,55 @@ const loadingImg = document.getElementById('loading-img');
 
 var load = 0;
 
-let int = setInterval(blurring, 30);
+/**
+ * Running 'blurring' function every 30miliseconds
+ */
+function unBlur() {
+    let int = setInterval(blurring, 30);
+}
 
+
+
+/**
+ * Function for blurring
+ */
 function blurring() {
     load++;
-
     if (load > 99) {
         clearInterval(int);
     }
-    loadingText.innerText = load + '%';
+    console.log(load);
+    // Displaying blur value in loading text
+    loadingText.innerText = `${load}%`;
+    // decreating the opacity of loading text to 0
+    loadingText.style.opacity = 1 - load / 100;
+    // decreaing the blur filter of image from 100px to 0
+    loadingImg.style.filter = `blur(${100 - load}px)`;
 }
+
+/**
+ * SLIDER 
+ */
+
+const slideIn = document.querySelectorAll('.slide-in');
+
+console.log(slideIn);
+
+window.addEventListener('scroll', function () {
+    // get the height of the screen
+    const screenHeight = window.innerHeight;
+    // set triggering height
+    const triggerHeight = window.innerHeight / 5 * 4;
+
+    slideIn.forEach(slide => {
+        // getting the top portion location of the box/slide
+        const boxTopLocation = slide.getBoundingClientRect().top;
+        if (boxTopLocation < triggerHeight) {
+            slide.classList.add('slide-show');
+        } else {
+            slide.classList.remove('slide-show');
+        }
+    });
+
+});
+

@@ -1,0 +1,13 @@
+.slide-in {
+    margin: 100px auto !important;
+    transform: translateX(200%);
+    transition: transform .5s ease-in-out;
+
+    &:nth-of-type(even) {
+        transform: translateX(-200%);
+    }
+
+    &.slide-show {
+        transform: translateX(0);
+    }
+}
