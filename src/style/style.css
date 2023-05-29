@@ -206,3 +206,49 @@
     transform: translateX(-200%); }
   .slide-in.slide-show {
     transform: translateX(0); }
+
+:root {
+  --hover-width: 75%;
+  --other-width: 25%; }
+
+.split-page-box {
+  height: 100vh;
+  position: relative; }
+  .split-page-box_split {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow-x: hidden;
+    transition: all 1s ease; }
+    .split-page-box_split h1 {
+      font-size: 7rem;
+      color: #ffffff;
+      white-space: nowrap; }
+  .split-page-box_split_left {
+    left: 0;
+    width: 50%;
+    background-image: url("/image/javascript.jpg"); }
+  .split-page-box_split_right {
+    right: 0;
+    width: 50%;
+    background-image: url("/imagE/laravel.jpg"); }
+
+.split-page-hover_left .split-page-box_split_left {
+  width: var(--hover-width); }
+
+.split-page-hover_left .split-page-box_split_right {
+  width: var(--other-width); }
+
+.split-page-hover_right .split-page-box_split_left {
+  width: var(--other-width); }
+
+.split-page-hover_right .split-page-box_split_right {
+  width: var(--hover-width); }

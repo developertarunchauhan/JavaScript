@@ -1,0 +1,79 @@
+:root {
+    --hover-width: 75%;
+    --other-width: 25%;
+}
+
+.split-page-box {
+    height: 100vh;
+    position: relative;
+
+    &_split {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        overflow-x: hidden;
+        transition: all 1s ease;
+
+        h1 {
+            font-size: 7rem;
+            color: #ffffff;
+            white-space: nowrap;
+        }
+    }
+
+    &_split_left {
+        left: 0;
+        width: 50%;
+        background-image: url('/image/javascript.jpg');
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     height: 100%;
+        //     width: 100%;
+        //     background-color: rgba(#F0DB4F, 0.2);
+        // }
+    }
+
+    &_split_right {
+        right: 0;
+        width: 50%;
+        background-image: url('/imagE/laravel.jpg');
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     height: 100%;
+        //     width: 100%;
+        //     background-color: rgba(#fb503b, 0.2);
+        // }
+    }
+}
+
+.split-page-hover_left {
+    & .split-page-box_split_left {
+        width: var(--hover-width);
+    }
+
+    & .split-page-box_split_right {
+        width: var(--other-width);
+    }
+}
+
+.split-page-hover_right {
+    & .split-page-box_split_left {
+        width: var(--other-width);
+    }
+
+    & .split-page-box_split_right {
+        width: var(--hover-width);
+    }
+}

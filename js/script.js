@@ -379,3 +379,19 @@ window.addEventListener('scroll', function () {
 
 });
 
+/**
+ * SPLIT PAGE 
+ */
+
+const mainContainer = document.querySelector('.split-page-box');
+const leftContainer = document.querySelector('.split-page-box_split_left');
+const rightContainer = document.querySelector('.split-page-box_split_right');
+
+console.log(mainContainer);
+console.log(leftContainer);
+console.log(rightContainer);
+
+leftContainer.addEventListener('mouseenter', () => mainContainer.classList.add('split-page-hover_left'));
+leftContainer.addEventListener('mouseleave', () => mainContainer.classList.remove('split-page-hover_left'));
+rightContainer.addEventListener('mouseenter', () => mainContainer.classList.add('split-page-hover_right'));
+rightContainer.addEventListener('mouseleave', () => mainContainer.classList.remove('split-page-hover_right'));
