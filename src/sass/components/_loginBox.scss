@@ -1,0 +1,90 @@
+.login-box {
+    height: 100vh;
+    width: 100%;
+    //border: 1px solid red;
+
+    &-content {
+        //height: 300px;
+        width: 300px;
+
+        & form {
+            height: 100%;
+            width: 100%;
+            padding: 1rem 0;
+            color: #ffffff;
+
+            & h3 {
+                text-align: center;
+            }
+
+            & .form-content {
+                position: relative;
+                width: 90%;
+                margin: 1rem auto;
+
+                & input {
+                    background-color: transparent;
+                    border: 0;
+                    border-bottom: 2px solid #ffffff;
+                    display: block;
+                    width: 100%;
+                    font-size: 1.2rem;
+                    color: #ffffff;
+
+                    &:focus {
+                        outline: 0;
+                        border-color: $gray-400;
+
+                        &+label span {
+                            color: red;
+                            transform: translateY(-30px);
+                        }
+                    }
+
+                    &:valid {
+                        border-color: $green;
+
+                        &+label span {
+                            color: green;
+                            transform: translateY(-30px);
+                        }
+                    }
+                }
+
+                & label {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    & span {
+                        display: inline-block;
+                        font-size: 1.2rem;
+                        min-width: 5px;
+                        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                    }
+                }
+
+                & button {
+                    background-color: transparent;
+                    border: 1px solid #ffffff;
+                    padding: .2rem 1.5rem;
+                    border-radius: .5rem;
+                    color: #ffffff;
+                    margin-bottom: .5rem;
+                    width: 100%;
+
+                    &:hover {
+                        border-color: $gray-400;
+                    }
+                }
+
+                & p {
+                    font-size: .8rem;
+                }
+
+            }
+
+
+        }
+    }
+}

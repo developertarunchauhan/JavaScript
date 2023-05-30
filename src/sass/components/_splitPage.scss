@@ -61,6 +61,10 @@
 .split-page-hover_left {
     & .split-page-box_split_left {
         width: var(--hover-width);
+
+        & h1 {
+            transform: rotate(90deg);
+        }
     }
 
     & .split-page-box_split_right {

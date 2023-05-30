@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -165,7 +165,7 @@
         <!-- Blurry Loading Start-->
     </div>
 
-    <div class="container-fluid bg-success p-0">
+    <div class="container-fluid bg-success p-0" id="split-page">
         <div class="split-page-box">
             <div class="split-page-box_split split-page-box_split_left">
                 <h1>
@@ -181,7 +181,27 @@
             </div>
         </div>
     </div>
-
+    <div class="container-fluid bg-success p-0" id="login-box">
+        <div class="login-box d-flex justify-content-center align-items-center">
+            <div class="login-box-content border-info shadow bg-info rounded">
+                <form action="#" method="post" class="d-flex justify-content-center flex-column">
+                    <h3>Login</h3>
+                    <div class="form-content">
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-content">
+                        <input type="password" name="password" id="passwrod" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="form-content">
+                        <button type="submit">Login</button>
+                        <p>Don't have an account ? <a href="#">Register</a> new</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

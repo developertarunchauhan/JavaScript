@@ -395,3 +395,20 @@ leftContainer.addEventListener('mouseenter', () => mainContainer.classList.add('
 leftContainer.addEventListener('mouseleave', () => mainContainer.classList.remove('split-page-hover_left'));
 rightContainer.addEventListener('mouseenter', () => mainContainer.classList.add('split-page-hover_right'));
 rightContainer.addEventListener('mouseleave', () => mainContainer.classList.remove('split-page-hover_right'));
+
+
+/**
+ * LOGIN BOX
+ */
+
+const loginLabel = document.querySelectorAll('.form-content label');
+
+console.log(loginLabel);
+
+loginLabel.forEach((label) => {
+    label.innerHTML = label.innerText
+        .split('')
+        .map((letter, idx) => `<span style="transition-delay:${idx * 30}ms">${letter}</span>`)
+        .join('');
+});
+
