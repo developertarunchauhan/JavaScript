@@ -311,3 +311,6 @@
             border-color: #ced4da; }
         .login-box-content form .form-content p {
           font-size: .8rem; }
+
+.sound-box {
+  height: 100vh; }

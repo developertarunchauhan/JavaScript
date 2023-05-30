@@ -412,3 +412,31 @@ loginLabel.forEach((label) => {
         .join('');
 });
 
+/**
+ * SOUND BUTTON
+ */
+
+const sounds = [
+    'applause',
+    'boo',
+    'gasp',
+    'tada',
+    'cheers',
+    'wrong'
+];
+
+sounds.forEach(sound => {
+    const btn = document.createElement('button');
+    btn.classList.add('btn', 'btn-primary', 'rounded-0', 'border-0', 'shadow', 'mx-1', 'text-uppercase', 'fw-light', 'btn-lg');
+    btn.innerText = sound;
+
+    btn.addEventListener('click', () => {
+        sounds.forEach(sound => {
+            document.getElementById(sound).pause();
+            document.getElementById(sound).currentTime = 0;
+        });
+        document.getElementById(sound).play();
+    });
+    document.querySelector('.sound-box').appendChild(btn);
+});
+
