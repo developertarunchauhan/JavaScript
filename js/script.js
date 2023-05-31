@@ -440,3 +440,32 @@ sounds.forEach(sound => {
     document.querySelector('.sound-box').appendChild(btn);
 });
 
+/**
+ * DAD JOKE
+ */
+
+const jokeBox = document.getElementById('joke-box');
+const jokeBoxBtn = document.getElementById('joke-box-btn');
+const jokeBoxText = document.getElementById('joke-box-text');
+
+getJoke();
+
+async function getJoke() { // use async keyword with wait keyword
+
+    // fetch('https://icanhazdadjoke.com/', {
+    //     headers: {
+    //         'Accept': 'application/json'
+    //     }
+    // }).then(response => response.json()).then(data => {
+    //     jokeBoxText.innerHTML = data.joke;
+    // });
+    config = {
+        headers: {
+            'Accept': 'application/json'
+        },
+    };
+
+    const response = await fetch('https://icanhazdadjoke.com/', config);
+    const data = await response.json();
+    jokeBoxText.innerHTML = data.joke;
+}
