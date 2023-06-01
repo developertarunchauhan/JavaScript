@@ -1,0 +1,64 @@
+.faq-box {
+    height: 100vh;
+
+    &-container {
+        width: 70vw;
+        position: relative;
+        padding: 1rem;
+        transition: all 0.5s ease;
+        overflow: hidden;
+
+        &-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        &-body {
+            display: none;
+        }
+
+        &-button {
+            border: 1px solid yellow;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border: none;
+            background: transparent;
+            font-size: 1.2rem;
+            cursor: pointer;
+
+            & .bi-caret-up {
+                display: none;
+            }
+        }
+
+        &.active {
+            background-color: #fff5f5 !important;
+
+            &::before {
+                content: "\f086";
+                font-family: 'Font Awesome 5 Free';
+                color: #2ecc71;
+                font-size: 8rem;
+                position: absolute;
+                opacity: 0.2;
+                top: -20px;
+                left: 0;
+            }
+
+        }
+
+        &.active &-body {
+            display: block;
+        }
+
+        &.active &-button .bi-caret-down {
+            display: none;
+        }
+
+        &.active &-button .bi-caret-up {
+            display: block;
+        }
+
+    }
+}

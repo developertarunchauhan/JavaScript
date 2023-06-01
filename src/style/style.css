@@ -317,3 +317,48 @@
 
 .dad-joke-box {
   height: 100vh; }
+
+.key-code-box {
+  height: 100vh; }
+
+.faq-box {
+  height: 100vh; }
+  .faq-box-container {
+    width: 70vw;
+    position: relative;
+    padding: 1rem;
+    transition: all 0.5s ease;
+    overflow: hidden; }
+    .faq-box-container-title {
+      font-weight: 600;
+      font-size: 1.1rem; }
+    .faq-box-container-body {
+      display: none; }
+    .faq-box-container-button {
+      border: 1px solid yellow;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      border: none;
+      background: transparent;
+      font-size: 1.2rem;
+      cursor: pointer; }
+      .faq-box-container-button .bi-caret-up {
+        display: none; }
+    .faq-box-container.active {
+      background-color: #fff5f5 !important; }
+      .faq-box-container.active::before {
+        content: "\f086";
+        font-family: 'Font Awesome 5 Free';
+        color: #2ecc71;
+        font-size: 8rem;
+        position: absolute;
+        opacity: 0.2;
+        top: -20px;
+        left: 0; }
+    .faq-box-container.active .faq-box-container-body {
+      display: block; }
+    .faq-box-container.active .faq-box-container-button .bi-caret-down {
+      display: none; }
+    .faq-box-container.active .faq-box-container-button .bi-caret-up {
+      display: block; }

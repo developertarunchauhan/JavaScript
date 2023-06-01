@@ -459,6 +459,7 @@ async function getJoke() { // use async keyword with wait keyword
     // }).then(response => response.json()).then(data => {
     //     jokeBoxText.innerHTML = data.joke;
     // });
+
     config = {
         headers: {
             'Accept': 'application/json'
@@ -469,3 +470,34 @@ async function getJoke() { // use async keyword with wait keyword
     const data = await response.json();
     jokeBoxText.innerHTML = data.joke;
 }
+/**
+ * KEY CODE
+ */
+
+
+
+const keyCodeKey = document.getElementById('key-code-key');
+const keyCodeCode = document.getElementById('key-code-code');
+const keyCodeKeyCode = document.getElementById('key-code-keycode');
+
+window.addEventListener('keydown', (e) => {
+    console.log(e);
+    keyCodeKey.innerHTML = e.key;
+    keyCodeCode.innerHTML = e.code;
+    keyCodeKeyCode.innerHtml = e.keyCode ? e.keyCode : 'N/A';
+});
+
+/**
+ * FAQ BOX
+ */
+
+const toggles = document.querySelectorAll('.faq-box-container-button');
+
+console.log(toggles);
+
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        toggle.parentNode.classList.toggle('active');
+    });
+});
+
