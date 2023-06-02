@@ -327,13 +327,13 @@
     width: 70vw;
     position: relative;
     padding: 1rem;
-    transition: all 0.5s ease;
     overflow: hidden; }
     .faq-box-container-title {
       font-weight: 600;
       font-size: 1.1rem; }
     .faq-box-container-body {
-      display: none; }
+      display: none;
+      transition: all 5s ease; }
     .faq-box-container-button {
       border: 1px solid yellow;
       position: absolute;
@@ -362,3 +362,6 @@
       display: none; }
     .faq-box-container.active .faq-box-container-button .bi-caret-up {
       display: block; }
+
+.tags-box {
+  height: 100vh; }

@@ -501,3 +501,29 @@ toggles.forEach(toggle => {
     });
 });
 
+/**
+ * TAGS
+ */
+
+const tagList = document.getElementById('tag-list');
+
+const tagBox = document.getElementById('tag-box');
+
+tagBox.addEventListener('keyup', (e) => {
+    input = e.target.value;
+    console.log(input);
+
+    const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag => tag.trim());
+
+    console.log(tags);
+
+    tagList.innerHTML = '';
+
+    tags.forEach(tag => {
+        const tagSpan = document.createElement('span');
+        tagSpan.classList.add('bg-warning', 'rounded-3', 'd-inline-block', 'px-1', 'text-light', 'mx-1', 'mb-1');
+        tagSpan.innerText = tag;
+        tagList.appendChild(tagSpan);
+    });
+});
+
