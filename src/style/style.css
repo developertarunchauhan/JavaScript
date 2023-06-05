@@ -365,3 +365,31 @@
 
 .tags-box {
   height: 100vh; }
+
+.animateNav {
+  height: 100vh; }
+  .animateNav .nav-box ul {
+    list-style: none;
+    padding: 1rem 1rem;
+    box-shadow: 0 -0.1rem 2rem rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 10rem; }
+    .animateNav .nav-box ul li {
+      display: inline-block;
+      border: 1px solid yellow;
+      padding: .2rem 1rem; }
+      .animateNav .nav-box ul li .toggle {
+        width: 100%;
+        height: 10px;
+        background-color: red; }
+        .animateNav .nav-box ul li .toggle::before {
+          content: "";
+          width: 100%;
+          height: 10px;
+          color: red;
+          background-color: red; }
+        .animateNav .nav-box ul li .toggle::after {
+          content: "";
+          width: 100%;
+          height: .5px;
+          background-color: red; }

@@ -527,3 +527,6 @@ tagBox.addEventListener('keyup', (e) => {
     });
 });
 
+/**
+ * Animate Naviation
+ */

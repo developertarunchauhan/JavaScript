@@ -1,0 +1,42 @@
+.animateNav {
+    height: 100vh;
+
+    & .nav-box {
+
+
+        & ul {
+            list-style: none;
+            padding: 1rem 1rem;
+            box-shadow: 0 -.1rem 2rem rgba(#000000, .1);
+            background-color: #ffffff;
+            border-radius: 10rem;
+
+            & li {
+                display: inline-block;
+                border: 1px solid yellow;
+                padding: .2rem 1rem;
+
+                & .toggle {
+                    width: 100%;
+                    height: 10px;
+                    background-color: red;
+
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 10px;
+                        color: red;
+                        background-color: red;
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: .5px;
+                        background-color: red;
+                    }
+                }
+            }
+        }
+    }
+}
